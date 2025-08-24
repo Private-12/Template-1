@@ -8,6 +8,7 @@ function nav()
         document.getElementById("lines").classList.add("rotate2");
         document.getElementById("lines").classList.remove("rotate");
         open = false;
+        localStorage.setItem("Open", open);
     }
     else 
     {
@@ -16,6 +17,7 @@ function nav()
         document.getElementById("lines").classList.add("rotate");
         document.getElementById("lines").classList.remove("rotate2");
         open = true;
+        localStorage.setItem("Open", open);
     }
 }
 window.onload = function(){
@@ -26,6 +28,14 @@ window.onload = function(){
     } else if (storedLight === "false") {
         light = true;
         ChangeLight();
+    }
+    const storedOpen = localStorage.getItem("Open");
+    if (storedOpen === "true") {
+        open = false;
+        nav();
+    } else if (storedOpen === "false") {
+        open = true;
+        nav();
     }
 };
 var light = false;
