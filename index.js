@@ -18,6 +18,16 @@ function nav()
         open = true;
     }
 }
+window.onload = function(){
+    const storedLight = localStorage.getItem("light");
+    if (storedLight === "true") {
+        light = false;
+        ChangeLight();
+    } else if (storedLight === "false") {
+        light = true;
+        ChangeLight();
+    }
+};
 var light = false;
 function ChangeLight() 
 {
@@ -50,9 +60,15 @@ function ChangeLight()
         for (let i = 0; i < navLinks.length; i++) {
             navLinks[i].style.color = "";
         }
+        let Ds = document.getElementsByClassName("navD");
+        for (let i = 0; i < Ds.length; i++) {
+            Ds[i].style.borderTop = "";
+        }
+
         document.getElementById("nav").style.backgroundColor = "";
         document.getElementById("lines").outerHTML = '<img src="lines.png" class="lines" id="lines" onclick="nav()">'
         light = false;
+        localStorage.setItem("light", "false");
     }
     else 
     { 
@@ -94,5 +110,6 @@ function ChangeLight()
         }
         document.getElementById("lines").outerHTML = '<img src="linesB.png" class="lines" id="lines" onclick="nav()">';
         light = true;
+        localStorage.setItem("light", "true");
     }
 }
