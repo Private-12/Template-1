@@ -1,0 +1,137 @@
+body
+{
+  background-color: #222; /* #daa520;*/
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family:'Times New Roman', Times, serif;
+  color: #daa520; /* #222*/
+  text-align: center;
+}
+
+
+h1 {
+  text-decoration: underline #daa520; /* #222*/
+  font-size: 100px;
+}
+
+h2 {
+  text-decoration: underline #daa520; /* #222*/
+  font-size: 60px;
+}
+
+.macbeth {
+max-width: 100px;
+}
+
+p {
+  font-size: 35px;
+}
+
+.headingflex {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  background-color: rgba(54, 54, 54, 0.5);
+  border-radius: 50px;
+}
+.Text {
+  position: absolute;
+  width: 60%;
+  left:20%;
+  background-color: #2c2c2c;
+  height: 90%;
+  top: 5%;
+  border-radius: 50px;
+  overflow: show;
+  height: fit-content;
+}
+.text {
+  height: 95vh;
+}
+.subheadingflex {
+  left: -5%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: absolute;
+  overflow: auto;
+  height:fit-content;
+  border-radius: 50px;
+  background-color: rgba(54, 54, 54, 0.5);
+  top: 125%;
+}
+.lines {
+  position: fixed;
+  width: 5%;
+  left:2%;
+  top: 5%;
+}
+.rotate {
+  animation: rotate 0.3s forwards;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(90deg); }
+}
+.rotate2 {
+  animation: rotate2 0.3s forwards;
+}
+@keyframes rotate2 {
+  from { transform: rotate(90deg); }
+  to { transform: rotate(0deg); }
+}
+.lines:hover {
+  cursor: pointer;
+}
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  display: none;
+  border-right: 1px solid #daa520; /* #222*/
+  color: #daa520;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 10px 0;
+}
+#nav a {
+  color: #daa520;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 10px 0;
+}
+.navD {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  height: 16%;
+  border-top: 1px solid #daa520; /* #222*/
+  width: 100%;
+  justify-content: center;
+  line-height: 5;
+  transition: background-color 0.5s ease-in-out;
+
+}
+.navD:hover {
+  background-color: #003030
+}
+.active {
+  background-color: #2c2c00 !important;
+}
+.D1 {top: 20%;}
+.D2 {top: 36%;}
+.D3 {top: 52%;}
+.D4 {top: 68%;}
+.D5 {top: 84%;}
+
+.Drokimg {
+  width: 50%;
+}
