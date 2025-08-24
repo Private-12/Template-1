@@ -142,3 +142,10 @@ p {
 .Drokimg {
   width: 50%;
 }
+.colourbut
+{
+  color: aqua;
+}
+.colourbut:hover {
+  cursor: pointer;
+}
