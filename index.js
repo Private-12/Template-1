@@ -108,7 +108,7 @@ function ChangeLight()
         for (let i = 0; i < active.length; i++) {
             active[i].style.color = "white !important";
         }
-        document.getElementById("lines").outerHTML = '<img src="linesB.png" class="lines" id="lines" onclick="nav()">';
+        document.getElementById("lines").outerHTML = '<img src="LinesB.png" class="lines" id="lines" onclick="nav()">';
         light = true;
         localStorage.setItem("light", "true");
     }
