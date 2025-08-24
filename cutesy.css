@@ -116,8 +116,15 @@ p {
   border-top: 1px solid #daa520; /* #222*/
   width: 100%;
   justify-content: center;
-  line-height: 5;
   transition: background-color 0.5s ease-in-out;
+
+}
+.Navtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 
 }
 .navD:hover {
